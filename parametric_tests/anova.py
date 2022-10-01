@@ -14,6 +14,7 @@ df.columns = df.columns.str.replace(".","_", regex=False)
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+# Boxplots and stipplots
 
 ax = sns.boxplot(x='Species', y='Petal_Width', data=df, color="#99c2a2")
 ax = sns.stripplot(x='Species', y='Petal_Width', data=df, color="#7d0013")
@@ -85,7 +86,7 @@ w, pvalue = stats.bartlett(setosa['Petal_Width'], versicolor['Petal_Width'], vir
 print(w, pvalue)
 
 # %%
-## Levene's test for homogenetiy of variances
+## Levene's test for homogeneity of variances
 from bioinfokit.analys import stat 
 res = stat()
 res.levene(df=df, res_var='Petal_Width', xfac_var='Species')
