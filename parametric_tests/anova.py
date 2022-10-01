@@ -23,7 +23,7 @@ plt.show()
 # %%
 import scipy.stats as stats
 
-## Interseted in petal width
+## Interested in petal width
 
 setosa = df.loc[df['Species'] == "setosa"]
 versicolor = df.loc[df['Species'] == "versicolor"]
